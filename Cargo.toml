@@ -1,12 +1,12 @@
 [package]
-name = "name_api"
+name = "product-highlighted-api"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
 # Clients API
 reqwest = {version="0.12", default-features=false}
-doli-client-api-rs = {path = "https://github.com/Cyrix126/doli-client-api-rs"}
+doli-client-api-rs = {git = "https://github.com/Cyrix126/doli-client-api-rs"}
 # configuration file
 get_pass = {git = "https://github.com/Cyrix126/get_pass"}
 confy = "0.6"
