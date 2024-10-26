@@ -7,11 +7,11 @@ use thiserror::Error;
 pub enum AppError {
     #[error("API returned an error")]
     #[status(StatusCode::INTERNAL_SERVER_ERROR)]
-    PgError(#[from] PoolError),
+    Pg(#[from] PoolError),
     #[error("API returned an error")]
     #[status(StatusCode::INTERNAL_SERVER_ERROR)]
-    DeadPoolError(#[from] InteractError),
+    DeadPool(#[from] InteractError),
     #[error("API returned an error")]
     #[status(StatusCode::INTERNAL_SERVER_ERROR)]
-    DieselError(#[from] diesel::result::Error),
+    Diesel(#[from] diesel::result::Error),
 }
